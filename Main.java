@@ -22,6 +22,7 @@ public class Main {
     System.out.println("입력한 문자열 : " + str+", 찾을문자 : "+c);
     int cnt = new Main().solution(str, c);
     System.out.println("찾은 갯수 : "+cnt);
+    in.close();
     return ;
   }
 }
