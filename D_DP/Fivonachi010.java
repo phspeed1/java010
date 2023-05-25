@@ -4,7 +4,7 @@ public class Fivonachi010 {
         int in = 7;
         int out;
         out = solution(in);
-        System.out.println("out : "+out);
+        System.out.println("out1 : "+out);
     }
 
     static int solution(int n){
