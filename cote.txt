@@ -1,0 +1,34 @@
+
+# 재귀 (Recursive)
+재귀함수는 콜스택에 쌓인다. 재귀함수 앞부분은 순방향, 뒷부분은 역방향으로 실행된다.
+선언적 프로그램, 종료조건 필수.
+
+# 정렬 (Sort)
+* Selection Sort : 배열에서 가장 작은수를 찾아서 제일 앞부분으로 swap
+* Bubble Sort : n 과 n+1 인덱스의 수를 비교해서 swap 제일 큰수를 제일 끝으로 밀어낸다.
+* Merge Sort : 배열을 2개로 나누어서~
+* Quick Sort : 
+
+# DP (Dynamic Programming)
+피보나치수열을 배열을 이용한 DP 를 이용하면 콜스택도 덜 사용하고 속도도 좋음.
+
+# util
+System.out.println("배열출력 : "+Arrays.toString(array));
+
+Arrays.sort(charArray); // char[] 정렬
+Arrays.sort(CharacterArray, Collections.reverseOrder()); // Character[] 내림정렬
+hashMap.getOrDefault(key, defaultValue);
+
+
+
+# 하노이의 탑
+세개의 기둥이 있다. 하기둥에 밑에서부터 위로 큰원판에서 작은원판이 순서대로 쌓여있다.
+한번에 하나의 원판만 옮길 수 있다. 큰원판이 작은원판 위에 있으면 안된다.
+[3,]
+[ 2,1]
+[]
+
+
+N 개의 원반을 옮기기 위해서는 N-1개의 원반을 이웃한 기둥으로 옮겨야 합니다.
+가장 큰 원반이 최종 목적 기둥으로 옮깁니다.
+이제 이웃한 기둥에서 n-1개의 원반을 최종 목적 기둥으로 옮겨야 합니다.

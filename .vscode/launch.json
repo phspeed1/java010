@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BubbleSort010",
+            "request": "launch",
+            "mainClass": "BubbleSort010",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Solution02",
+            "request": "launch",
+            "mainClass": "Solution02",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}",
