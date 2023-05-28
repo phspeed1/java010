@@ -1,10 +1,10 @@
 import java.util.*;
 
-public class Solution02 {
+public class AloneNumber020 {
     public static void main(String[] args) {
         String input_string = "edeaaabbccd";
         System.out.println("input_string : "+input_string);
-        String output_string = new Solution02().solution(input_string);
+        String output_string = new AloneNumber020().solution(input_string);
         System.out.println("output_string : "+output_string);
     }
     public String solution(String input_string) {

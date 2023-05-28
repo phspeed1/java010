@@ -4,7 +4,7 @@
       {
         "label": "Java Compile and Run",
         "type": "shell",
-        "command": "javac ${file} && java ${fileBasenameNoExtension}",
+        "command": "javac -encoding UTF8 ${file} && java ${fileBasenameNoExtension}",
         "group": {
           "kind": "build",
           "isDefault": true

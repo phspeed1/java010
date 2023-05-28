@@ -1,4 +1,6 @@
 
+# leet code https://leetcode.com/
+
 # 재귀 (Recursive)
 재귀함수는 콜스택에 쌓인다. 재귀함수 앞부분은 순방향, 뒷부분은 역방향으로 실행된다.
 선언적 프로그램, 종료조건 필수.
@@ -6,8 +8,21 @@
 # 정렬 (Sort)
 * Selection Sort : 배열에서 가장 작은수를 찾아서 제일 앞부분으로 swap
 * Bubble Sort : n 과 n+1 인덱스의 수를 비교해서 swap 제일 큰수를 제일 끝으로 밀어낸다.
-* Merge Sort : 배열을 2개로 나누어서~
-* Quick Sort : 
+* Merge Sort 
+ . 각각 정렬된 두개의 배열을 merge 하면서 정렬
+ . 시작인덱스, 마지막인덱스를 받아서 배열을 반으로 나눠서 2번 mergeSort() 재귀 호출
+ . 재귀함수가 돌아왔을 때는 가운데를 기준으로 왼쪽, 오른쪽이 정렬되어있는 상태이므로  merge() 호출해서 두개의 배열을 병합
+ . 병합할 때는 원본을 임시배열에 복사한 후 각각 idx 를 가지고 작은것부터 채워주되, 만약 start 쪽 배열이 다 차지 않았으면 채워준다.
+* Quick Sort
+ . pivot 값을 기준으로 작은파티션 큰파티션으로 나누는 것을 반복
+ . swap 이용
+
+# 탐색(DFS, BFS)
+DFS 는 Stack 또는 콜스텍 이용
+BFS 는 Queue 또는 루프문 이용
+노드 길이 만큼 visited 배열이나 hash 만들어서 이미 이동한곳은 가지 않도록 하면서 재귀 호출
+만약 노드별 연결노드 목록이 아닌  엣지 리스트가 온다면 List<Integer>[] adjacencyList = new ArrayList[NodeCnt]; 배열을 만들어 사용
+List<List<Integer>> retrivedResult = new ArrayList<>(); 로 탐색 덩어리별로 담을 수 있음
 
 # DP (Dynamic Programming)
 피보나치수열을 배열을 이용한 DP 를 이용하면 콜스택도 덜 사용하고 속도도 좋음.
@@ -19,16 +34,40 @@ Arrays.sort(charArray); // char[] 정렬
 Arrays.sort(CharacterArray, Collections.reverseOrder()); // Character[] 내림정렬
 hashMap.getOrDefault(key, defaultValue);
 
+List<List<Integer>> result = new ArrayList<>();
+List<Integer>[] nodeList = new ArrayList[n];
 
+Stack : push(), pop()
+Queue : new LinkedList(), offer(), pull()
+
+##############
+# Gejava
+##############
+# 피보나치 수열
+n = n-1 + n-2 
 
 # 하노이의 탑
 세개의 기둥이 있다. 하기둥에 밑에서부터 위로 큰원판에서 작은원판이 순서대로 쌓여있다.
 한번에 하나의 원판만 옮길 수 있다. 큰원판이 작은원판 위에 있으면 안된다.
-[3,]
-[ 2,1]
-[]
-
 
 N 개의 원반을 옮기기 위해서는 N-1개의 원반을 이웃한 기둥으로 옮겨야 합니다.
 가장 큰 원반이 최종 목적 기둥으로 옮깁니다.
 이제 이웃한 기둥에서 n-1개의 원반을 최종 목적 기둥으로 옮겨야 합니다.
+
+##############
+# PCCP
+##############
+# 외톨이 수
+in : edeaaabbccd 
+out : de
+
+
+
+
+
+
+
+2023-05-27 토요일
+# LeetCode - rooms & keys : 간단한 탐색
+# LeetCode - Connected Components : 엣지를 --> 노드별 연결 목록 으로 변경해서
+# MergeSort

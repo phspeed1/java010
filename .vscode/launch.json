@@ -6,23 +6,58 @@
     "configurations": [
         {
             "type": "java",
+            "name": "QuickSort010",
+            "request": "launch",
+            "mainClass": "QuickSort010",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "ConnectedGroupCnt020",
+            "request": "launch",
+            "mainClass": "ConnectedGroupCnt020",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "MergeSort020",
+            "request": "launch",
+            "mainClass": "MergeSort020",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "MergeSort010",
+            "request": "launch",
+            "mainClass": "MergeSort010",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "HanoiTower010",
+            "request": "launch",
+            "mainClass": "HanoiTower010",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "ConnectedComponents",
+            "request": "launch",
+            "mainClass": "ConnectedComponents",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "HanoiTower030",
+            "request": "launch",
+            "mainClass": "HanoiTower030",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "BubbleSort010",
             "request": "launch",
             "mainClass": "BubbleSort010",
-            "projectName": "java010_47996499"
-        },
-        {
-            "type": "java",
-            "name": "Solution02",
-            "request": "launch",
-            "mainClass": "Solution02",
-            "projectName": "java010_47996499"
-        },
-        {
-            "type": "java",
-            "name": "Solution",
-            "request": "launch",
-            "mainClass": "Solution",
             "projectName": "java010_47996499"
         },
         {
