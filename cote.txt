@@ -54,6 +54,11 @@ N 개의 원반을 옮기기 위해서는 N-1개의 원반을 이웃한 기둥으로 옮겨야 합니다.
 가장 큰 원반이 최종 목적 기둥으로 옮깁니다.
 이제 이웃한 기둥에서 n-1개의 원반을 최종 목적 기둥으로 옮겨야 합니다.
 
+# Generic
+class Person<T extends Animal>{
+    public T info;
+}
+
 ##############
 # PCCP
 ##############
@@ -71,3 +76,4 @@ out : de
 # LeetCode - rooms & keys : 간단한 탐색
 # LeetCode - Connected Components : 엣지를 --> 노드별 연결 목록 으로 변경해서
 # MergeSort
+
