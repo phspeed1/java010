@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ConnectedGroupCnt030",
+            "request": "launch",
+            "mainClass": "ConnectedGroupCnt030",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
             "name": "QuickSort020",
             "request": "launch",
             "mainClass": "QuickSort020",
