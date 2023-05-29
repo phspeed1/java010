@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "HanoiTower040",
+            "request": "launch",
+            "mainClass": "HanoiTower040",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "QuickSort020",
             "request": "launch",
             "mainClass": "QuickSort020",
