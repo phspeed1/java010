@@ -24,11 +24,22 @@ BFS 는 Queue 또는 루프문 이용
 만약 노드별 연결노드 목록이 아닌  엣지 리스트가 온다면 List<Integer>[] adjacencyList = new ArrayList[NodeCnt]; 배열을 만들어 사용
 List<List<Integer>> retrivedResult = new ArrayList<>(); 로 탐색 덩어리별로 담을 수 있음
 
+
+# 순열(permutation)
+만들어내야하는조합 즉 arr.length 만큼 왔으면 재귀호출 종료하고, 결과 목록에 만든 조합을 add
+후보 즉 arr 에서 하나씩 꺼내서 이미 조합된배열에 있지 않으면 조합에 꺼낸것을 넣고, 재귀호출해서 다음 레벨로 이동
+재귀호출이 끝나서 콜스텍에서 꺼내질 때는 마지막에 넣은 것을 빼주어야 한다.
+
+# 조합(Combination)
+순열은 {A, B} 와 {B, A} 가 다른 것이지만, 조합은 {A, B} 와 {B, A} 가 같다. 즉 순서 무시
+
 # DP (Dynamic Programming)
 피보나치수열을 배열을 이용한 DP 를 이용하면 콜스택도 덜 사용하고 속도도 좋음.
 
 # util
 System.out.println("배열출력 : "+Arrays.toString(array));
+Arrys.copyof() 로 배열 copy
+
 
 Arrays.sort(charArray); // char[] 정렬
 Arrays.sort(CharacterArray, Collections.reverseOrder()); // Character[] 내림정렬
@@ -77,3 +88,14 @@ out : de
 # LeetCode - Connected Components : 엣지를 --> 노드별 연결 목록 으로 변경해서
 # MergeSort
 
+
+3C2 조합 resList(3) : [AB, AC, BC]
+3C2 중복조합 resList(6) : [AA, AB, AC, BB, BC, CC]
+3P2 순열 resList(6) : [AB, AC, BA, BC, CA, CB]
+3P2 중복순열 resList(9) : [AA, AB, AC, BA, BB, BC, CA, CB, CC]
+
+
+3P2 조합 부분집합 resList(6) : [A, AB, AC, B, BC, C]
+3P2 중복조합 resList(9) :         [A, AA, AB, AC, B, BB, BC, C, CC]
+3P2 순열 부분집합 resList(9) : [A, AB, AC, B, BA, BC, C, CA, CB]
+3P2 중복순열 부분집합 resList(12) : [A, AA, AB, AC, B, BA, BB, BC, C, CA, CB, CC]

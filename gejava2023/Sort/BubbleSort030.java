@@ -1,13 +1,13 @@
 import java.util.*;
 
-public class BuffleSort030{
+public class BubbleSort030{
 
     public static void main(String[] args){
         int[] arr = {3, 6, 1, 8, 2, 4};
         String str = "str";
         System.out.println("input : "+str);
     
-        new BuffleSort030().solution(arr);
+        new BubbleSort030().solution(arr);
         System.out.println("output : "+str);
     }
     

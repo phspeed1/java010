@@ -12,37 +12,33 @@ public class MergeSort020{
     }
     
     void solution(int[] arr){
-        int start = 0;
-        int end = arr.length -1;
-        
         System.out.println("Before : "+Arrays.toString(arr));
-        mergeSort(arr, start, end);
+        mergeSort(arr, 0, arr.length-1);
         System.out.println("After : "+Arrays.toString(arr));
     }
 
     void mergeSort(int[] arr, int start, int end){
-        if(start == end) return;
+        if(start >= end) return;
+
         int mid = (start + end) / 2;
         mergeSort(arr, start, mid);
         mergeSort(arr, mid+1, end);
-        merge(arr, start, end, mid);
+        merge(arr, start, mid, end);
     }
 
-    void merge(int[] arr, int start, int end, int mid){
-        int[] tmp = Arrays.copyOf(arr, arr.length);
+    void merge(int[] arr, int start, int mid, int end){
+        int[] temp = Arrays.copyOf(arr, arr.length);
         int left = start;
         int right = mid+1;
         int idx = start;
 
         while(left <= mid && right <= end){
-            if(tmp[left] < tmp[right])
-                arr[idx++] = tmp[left++];
+            if(temp[left] < temp[right])
+                arr[idx++] = temp[left++];
             else
-                arr[idx++] = tmp[right++];
+                arr[idx++] = temp[right++];
         }
-        while(left <= mid){
-            arr[idx++] = tmp[left++];
-        }
+        while(left <= mid) arr[idx++] = temp[left++];
     }
 
 }

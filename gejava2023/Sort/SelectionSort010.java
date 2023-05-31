@@ -2,30 +2,28 @@ import java.util.Arrays;
 
 public class SelectionSort010 {
     public static void main(String[] args) {
-        int[] src = {3, 6, 1, 8, 2, 4};
-        System.out.println("src : "+Arrays.toString(src));
-        int[] rtn = selectionSort(src);
-        System.out.println("rtn : "+Arrays.toString(rtn));
-
+        int[] arr = {3, 6, 1, 8, 2, 4};
+        System.out.println("before : "+Arrays.toString(arr));
+        new SelectionSort010().solution(arr);
+        System.out.println("After : "+Arrays.toString(arr));
     }
 
-    static int[] selectionSort(int[] src){
-        int minIdx;
-        int tmp;
-        for(int i=0; i<src.length; i++){
-            minIdx=i;
-            for(int j=i+1; j<src.length; j++){
-                System.out.println(Arrays.toString(src)+""+src[minIdx]+"["+j+"]"+src[j]+" ? "+(src[j] < src[minIdx]));
-                if(src[j] < src[minIdx]){
-                    minIdx = j;
-                }
-            }
-            swap(src, i, minIdx);
-            System.out.println(" "+Arrays.toString(src));
-    
+    private void solution(int[] arr){
+        selectionSort(arr, 0);
+    }
+
+    private void selectionSort(int[] arr, int idx){
+        if(idx == arr.length-1) return;
+
+        int minIdx = idx;
+        for(int i=idx; i<arr.length; i++){
+            if(arr[i] < arr[minIdx]) minIdx =i;
         }
-        return src;
+        swap(arr, idx, minIdx);
+        selectionSort(arr, idx+1);
+
     }
+
 
     static void swap(int[] arr, int idx1, int idx2){
         int tmp = arr[idx1];
