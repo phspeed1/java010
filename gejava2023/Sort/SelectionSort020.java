@@ -10,15 +10,13 @@ public class SelectionSort020 {
     }
 
     void selectionSort(int[] arr, int start){
-        if(start == arr.length -1)
-            return;
-
+        if(start == arr.length -1) return;
         int minIdx = start;
-        for(int i=start; i<arr.length; i++){
+        for(int i = start; i<arr.length; i++){
             if(arr[i] < arr[minIdx]) minIdx = i;
         }
-        System.out.println(Arrays.toString(arr) + " start : "+start + ", minIdx : "+minIdx);
         swap(arr, start, minIdx);
+        System.out.println(start+" : "+Arrays.toString(arr));
         selectionSort(arr, start+1);
     }
 

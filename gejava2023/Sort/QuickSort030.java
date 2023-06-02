@@ -19,21 +19,23 @@ public class QuickSort030{
 
     void quickSort(int[] arr, int start, int end){
         int part2 = partition(arr, start, end);
-        if(start < part2-1) quickSort(arr, start, part2-1);
-        if(part2 < end) quickSort(arr, part2, end);
+        if(start < part2 -1)
+            quickSort(arr, start, part2 -1);
+        if(part2 < end)
+            quickSort(arr, part2, end);
     }
 
-    int partition(int[] arr, int start, int end ){
-        int pivot = arr[( start + end )/ 2];
-        int left = start;
-        int right = end;
-        while(left <= right){
-            while(arr[left] < pivot) left++;
-            while(arr[right] > pivot) right--;
-            if(left <= right) swap(arr, left++, right--);
+    int partition(int arr[], int start, int end){
+        int pivot = arr[(start + end)/2];
+
+        while(start <= end){
+            while(arr[start] < pivot) start++;
+            while(arr[end] > pivot) end--;
+            if(start <= end)
+                swap(arr, start++, end--);
         }
 
-        return left;
+        return start;
     }
 
     void swap(int[] arr, int idx1, int idx2){

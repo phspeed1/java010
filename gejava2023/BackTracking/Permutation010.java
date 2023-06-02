@@ -3,34 +3,37 @@ import java.util.*;
 public class Permutation010{
 
     public static void main(String[] args){
-        char[] arr = {'A', 'B', 'C'};
-        String str = "str";
-        System.out.println("input : "+str);
+        String str = "ABC";
+        int N = 2;
+        System.out.println("input : "+str+" N : "+N);
     
-        new Permutation010().solution(arr);
-        System.out.println("output : "+str);
+        new Permutation010().solution(str, N);
     }
     
-    void solution(char[] arr){
-        ArrayList<Character> list = new ArrayList<Character>();
-        List<List<Character>> result = new ArrayList<>();
-        permutation(arr, 0, list, result);
-        System.out.println("result : "+result);
-        
+    void solution(String arr, int N){
+        List<String> result = new ArrayList<String>();
+        String buff = new String();
+        permutation(arr, N, buff, 0, result);
+        System.out.println("result("+result.size()+") : "+result);
     }
 
-    void permutation(char[] arr, int lev, ArrayList<Character> list, List<List<Character>> result){
-        if(lev == arr.length){
-            result.add((List<Character>)list.clone());
+    void permutation(String arr, int N, String buff, int lev, List<String> result){
+        if(lev == N){
+            result.add(new String(buff));
             return;
         }
 
-        for(char c : arr){
-            if(list.contains(c)) continue;
-            list.add(c);
-            permutation(arr, lev+1, list, result);
-            list.remove(list.size()-1);
+        for(int i=0; i<arr.length(); i++){
+            String str = arr.substring(i, i+1);
+       //     if(buff.contains(str)) continue;
+
+            buff += str;
+            permutation(arr, N, buff, lev+1, result);
+            buff = buff.substring(0, buff.length() -1);
         }
+
     }
+
+
 
 }
