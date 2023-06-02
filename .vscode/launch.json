@@ -6,20 +6,6 @@
     "configurations": [
         {
             "type": "java",
-<<<<<<< HEAD
-            "name": "ConnectedGroupCnt030",
-            "request": "launch",
-            "mainClass": "ConnectedGroupCnt030",
-            "projectName": "java010_73416584"
-=======
-            "name": "HanoiTower040",
-            "request": "launch",
-            "mainClass": "HanoiTower040",
-            "projectName": "java010_47996499"
->>>>>>> a8bd00637720fb721e3cbd19cdf454590b413362
-        },
-        {
-            "type": "java",
             "name": "QuickSort020",
             "request": "launch",
             "mainClass": "QuickSort020",
