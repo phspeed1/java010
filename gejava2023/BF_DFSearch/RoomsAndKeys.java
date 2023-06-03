@@ -1,12 +1,12 @@
 import java.util.*;
 
-public class Dfs010{
+public class RoomsAndKeys{
     public static void main(String[] args){
         int rooms[][] = {{1,3}, {3,0,1}, {2}, {0} };
         String str = "str";
         System.out.println("input : "+str);
 
-        new Dfs010().solution(rooms);
+        new RoomsAndKeys().solution(rooms);
         System.out.println("output : "+str);
     }
 

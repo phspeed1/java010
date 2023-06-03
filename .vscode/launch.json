@@ -6,6 +6,139 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf020StringMinNum2",
+            "request": "launch",
+            "mainClass": "Inf020StringMinNum2",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf010StringMinNUm",
+            "request": "launch",
+            "mainClass": "Inf010StringMinNUm",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf080IsSameReverseOnlyAlpha",
+            "request": "launch",
+            "mainClass": "Ch010_String.Inf080IsSameReverseOnlyAlpha",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf120StringTo2binToNum",
+            "request": "launch",
+            "mainClass": "Inf120StringTo2binToNum",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf110StringCompress",
+            "request": "launch",
+            "mainClass": "Inf110StringCompress",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf100StringCharBetween",
+            "request": "launch",
+            "mainClass": "Inf100StringCharBetween",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf090StringToOnlyNumber",
+            "request": "launch",
+            "mainClass": "Inf090StringToOnlyNumber",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf080IsSameReverseOnlyAlpha",
+            "request": "launch",
+            "mainClass": "Inf080IsSameReverseOnlyAlpha",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf070IsSameReverse",
+            "request": "launch",
+            "mainClass": "Inf070IsSameReverse",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf060StringDistinct",
+            "request": "launch",
+            "mainClass": "Inf060StringDistinct",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf050ReverseOnlyAlpha",
+            "request": "launch",
+            "mainClass": "Inf050ReverseOnlyAlpha",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf040ReverseStartEnd",
+            "request": "launch",
+            "mainClass": "Inf040ReverseStartEnd",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf030StringLongWord",
+            "request": "launch",
+            "mainClass": "Inf030StringLongWord",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf010CharCnt",
+            "request": "launch",
+            "mainClass": "Inf010CharCnt",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "BufferedReader010",
+            "request": "launch",
+            "mainClass": "BufferedReader010",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "BufferedReader010",
+            "request": "launch",
+            "mainClass": "gejava2023.IO.BufferedReader010",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Permutation030",
+            "request": "launch",
+            "mainClass": "Permutation030",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Combination030",
+            "request": "launch",
+            "mainClass": "Combination030",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Fivonachi010",
+            "request": "launch",
+            "mainClass": "Fivonachi010",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "QuickSort020",
             "request": "launch",
             "mainClass": "QuickSort020",

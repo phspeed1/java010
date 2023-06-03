@@ -1,6 +1,4 @@
 
-# leet code https://leetcode.com/
-
 # 재귀 (Recursive)
 재귀함수는 콜스택에 쌓인다. 재귀함수 앞부분은 순방향, 뒷부분은 역방향으로 실행된다.
 선언적 프로그램, 종료조건 필수.
@@ -82,18 +80,25 @@ out : de
 ##############
 # 코딩테스트 Java 문법
 ##############
-http://comumu.tistory.com/34
-https://velog.io/@ryusuz/JAVA-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9A%A9-%EC%A3%BC%EC%9A%94-%ED%95%A8%EC%88%98-%EB%AA%A8%EC%9D%8C
-https://jeongkyun-it.tistory.com/198
+# Integer Array <> int Array 변환
+Integer[] integerArr = Arrays.stream(intArr).boxed().toArray(Integer[]::new);
+int[] intArr = Arrays.stream(integerArr).mapToInt(Integer::intValue).toArray();
+# Array to List
+List<Integer> intList = Arrays.asList(integerArr);
+# compare 
+class StuScore implements Comparable<StuScore>{
+	public int compareTo(StuScore other){return this.score - other.score;}
+}
+# mod 연산은 덧셈, 뺄셈, 나눗셈에 대해서 분배법칙이 성립된다.
+(a * b) % c == (a%c * b%c) % c;
+# 아리스토테네스의 체
+소수 : 1과 자기 자신 이외에는 나누어지지 않는 수, 소수 판별은 2부터 자기 자신 -1 까지 다 나누어 봐서 나머지가 0이 아닌것으로 알 수 있지만, 
+루트씌운 제곱근 값 까지만 나누어 봐도 된다.  Math.sqrt(N) / i != 0
 
-
-
-
-2023-05-27 토요일
-# LeetCode - rooms & keys : 간단한 탐색
-# LeetCode - Connected Components : 엣지를 --> 노드별 연결 목록 으로 변경해서
-# MergeSort
-
+##############
+# 강의 사이트 모의고사 사이트
+##############
+# leet code https://leetcode.com/
 
 3C2 조합 resList(3) : [AB, AC, BC]
 3C2 중복조합 resList(6) : [AA, AB, AC, BB, BC, CC]
@@ -106,4 +111,27 @@ https://jeongkyun-it.tistory.com/198
 3P2 순열 부분집합 resList(9) : [A, AB, AC, B, BA, BC, C, CA, CB]
 3P2 중복순열 부분집합 resList(12) : [A, AA, AB, AC, B, BA, BB, BC, C, CA, CB, CC]
 
+2023-05-27 토요일
+# LeetCode - rooms & keys : 간단한 탐색
+# LeetCode - Connected Components : 엣지를 --> 노드별 연결 목록 으로 변경해서
+# MergeSort
 
+
+2023-06-03 토요일
+Infrun Ch.1 문자열 
+5. 특정 문자 뒤집기
+	문자 뒤집기 할 때 left++ 인덱스 right-- 인덱스로 Swap 할 수 있음
+7. 회문 문자열
+	문자 대칭인지 확인 할 때는  mid 값 까지만 반대편과 검사 하면 된다.
+8. 유효한 팰린드롬
+	문자 뒤집을 때 StringBuilder.reverse() 하면 간단하게 뒤집을 수 있음.
+9. 숫자만 추출
+	문자를 숫자로 바꿀 때 num = (num * 10) + (ch - '0') 으로 앞에서부터 읽어 나가면서 숫자를 만들 수 있음
+10. 가장 짧은 문자거리
+	내가 푼 방법 : 이중 루프로 문자마다 다시 문자열 길이만큼 루프돌면서 앞뒤칸 옮겨 가며 찾았으나
+	더 좋은 방법 : 배열하나 놓고, 왼쪽으로 같은 문자면 0, 다른문자면 거리++ 하면서 한번 쭉 돌고, 다시 오른쪽으로 한번더해서 더 작은값
+11. 문자열압축하기
+	내가 푼 방법 : 인덱스 이전값과 비교해서 사후에 넣었으나
+	더 좋은 방법 : 문자열 맨 뒤에 임시공백문자 하나 붙인 후, 인덱스를 문자열 길이 -1 까지 돌리면서, 인덱스 다음것 비교한다.
+12. 문자열이진수값
+	Integer.parseInt(str, 2) 하면 2진수로 파싱

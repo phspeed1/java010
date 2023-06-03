@@ -12,30 +12,33 @@ public class Permutation030{
     }
     
     void solution(String str, int N){
-        List<String> resList = new ArrayList<String>();
         StringBuilder buff = new StringBuilder();
-        permutation(str, N, buff, 0, resList);
+        HashSet<String> set = new HashSet<String>();
+        List<String> resList = new ArrayList<String>();
+
+        permutation(str, N, buff, 0, set, resList);
         System.out.println("순열 resList("+resList.size()+") : "+resList);
         
     }
 
-    void permutation(String str, int N, StringBuilder buff, int lev, List<String> resList){
+    void permutation(String str, int N, StringBuilder buff, int lev, HashSet<String> set, List<String> resList){
         if(lev == N){
-            if(buff.length() >0) resList.add(buff.toString());
+            resList.add(new String(buff));
             return;
         }
 
         for(int i=0; i<str.length(); i++){
-            char c = str.charAt(i);
-            
-            if(buff.indexOf( Character.toString(c) ) != -1) continue; // 중복순열은 이부분만 제거
+            String c = str.substring(i, i+1);
 
+        //    if(set.contains(c)) continue;
+
+            set.add(c);
             buff.append(c);
-            permutation(str, N, buff, lev+1, resList);
+            permutation(str, N, buff, lev+1, set, resList);
             buff.deleteCharAt(buff.length()-1);
-
+            set.remove(c);
         }
-
     }
+
 
 }
