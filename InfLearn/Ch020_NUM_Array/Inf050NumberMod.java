@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Main{
+public class Inf050NumberMod{
 
     public static void main(String[] args){
         int N = 0;
@@ -14,33 +14,34 @@ public class Main{
             ioe.printStackTrace();
         }
     
-        String rtn = new Main().solution(N);
+        int rtn = new Inf050NumberMod().solution(N);
         System.out.println(rtn);
     }
     
-    private String solution(int N){
+    private int solution(int N){
         StringBuilder buff = new StringBuilder();
-        long[] arr = fivo(N);
-        for(int i=0; i<arr.length; i++){
-            buff.append(" "+arr[i]);
+        int cnt = 0;
+        boolean[] checks = new boolean[N+1];
+
+        for(int i=2; i<=N; i++){
+            if(checks[i]) continue;
+
+            cnt++;
+            for(int j=i; j<= N; j = j + i){
+                checks[j] = true;
+            }
         }
-        return buff.toString().trim();
-    }
-
-    private long[] fivo(int N){
-        long[] arr = new long[N];
-
-        arr[0] = 1;
-        if(N == 0)  return arr;
         
-        arr[1] = 1;
-        if(N == 1)  return arr;
-
-        for(int i=2; i<N; i++){
-            arr[i] = arr[i-2] + arr[i-1];
-        }
-        return arr;
-
+        return cnt;
     }
+
+    boolean isSosu(int N){
+        for(int i=2; i<N; i++){
+            if(N % i == 0)
+                return false;
+        }
+        return true;
+    }
+
 
 }

@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf050NumberMod",
+            "request": "launch",
+            "mainClass": "Inf050NumberMod",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf040PrintFivo",
+            "request": "launch",
+            "mainClass": "Inf040PrintFivo",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf030StringMinNum3",
+            "request": "launch",
+            "mainClass": "Inf030StringMinNum3",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf020StringMinNum2",
             "request": "launch",
             "mainClass": "Inf020StringMinNum2",
