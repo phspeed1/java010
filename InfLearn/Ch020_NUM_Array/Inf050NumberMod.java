@@ -14,7 +14,7 @@ public class Inf050NumberMod{
             ioe.printStackTrace();
         }
     
-        int rtn = new Inf050NumberMod().solution(N);
+        int rtn = new Inf050NumberMod().solution2(N);
         System.out.println(rtn);
     }
     
@@ -35,7 +35,23 @@ public class Inf050NumberMod{
         return cnt;
     }
 
-    boolean isSosu(int N){
+    private int solution2(int N){
+        int cnt = 0;
+        for(int i=2; i<=N; i++){
+
+            double dSqrt = Math.sqrt(i);
+            int iSqrt = (int) dSqrt;
+            System.out.println(i+" : "+(dSqrt)+" , "+(iSqrt));
+
+            if(isPrime(N)){
+                cnt++;
+            }
+        }
+
+        return cnt;
+    }
+
+    boolean isPrime(int N){
         for(int i=2; i<N; i++){
             if(N % i == 0)
                 return false;

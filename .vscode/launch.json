@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf111ArrayRowSumMax",
+            "request": "launch",
+            "mainClass": "Inf111ArrayRowSumMax",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf110ArrayRowSumMax",
+            "request": "launch",
+            "mainClass": "Inf110ArrayRowSumMax",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf100ArrayUpDownLeftRight",
+            "request": "launch",
+            "mainClass": "Inf100ArrayUpDownLeftRight",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf090ArrayRowColCrosSum",
+            "request": "launch",
+            "mainClass": "Inf090ArrayRowColCrosSum",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf080NumArrayGradeOrder",
+            "request": "launch",
+            "mainClass": "Inf080NumArrayGradeOrder",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf070NumArrayContinueWieght",
+            "request": "launch",
+            "mainClass": "Inf070NumArrayContinueWieght",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf060PrimNumString",
+            "request": "launch",
+            "mainClass": "Inf060PrimNumString",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf050NumberMod",
+            "request": "launch",
+            "mainClass": "Inf050NumberMod",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
             "name": "Inf050NumberMod",
             "request": "launch",
             "mainClass": "Inf050NumberMod",
