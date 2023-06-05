@@ -8,34 +8,30 @@ public class Combination020{
         System.out.println("input : "+str);
     
         new Combination020().solution(str, N);
-        System.out.println("output : "+str);
-        System.out.println("-75 >> 1 : "+(-75 >> 2));
+    //    System.out.println("output : "+str);
     }
-    
+
     void solution(String str, int N){
-        String buff = new String();
-        List<String> resList = new ArrayList<String>();
-        combination(str, N, buff, 0, resList, new boolean[str.length()]);
-        System.out.println("resList("+resList.size()+") : "+resList);
 
+        List<String> list = new ArrayList<String>();
+        String buff = new String();
+        combination(str, N, buff, 0, list);
+        System.out.println(list);
     }
 
-    void combination(String arr, int N, String buff, int lev, List<String> result, boolean[] seen){
+    void combination(String str, int N, String buff, int lev, List<String> list){
         if(buff.length() == N){
-            result.add(new String(buff));
+            list.add(buff.toString());
             return;
         }
 
-        for(int i=lev; i<arr.length(); i++){
-        //    if(seen[i]) continue;
-
-            String c = arr.substring(i, i+1);
-            seen[i] = true;
-            buff += c;
-            combination(arr, N, buff, i, result, seen);
-            seen[i] = false;
-            buff = buff.substring(0, buff.length() -1);
+        for(int i=lev; i<str.length(); i++){
+            buff += str.charAt(i);
+            combination(str, N, buff, i+1, list);
+            buff = buff.substring(0, buff.length()-1);
         }
+
     }
+    
 
 }
