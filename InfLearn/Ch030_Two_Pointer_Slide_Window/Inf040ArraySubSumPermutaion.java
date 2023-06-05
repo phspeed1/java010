@@ -7,7 +7,7 @@ public class Inf040ArraySubSumPermutaion{
         int N = 8;
         int M = 6;
         String str = "1 2 1 3 1 1 1 2";
-        // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // try{
         //     str = br.readLine();
         //     String[] strArr = str.split(" ");
@@ -54,17 +54,55 @@ public class Inf040ArraySubSumPermutaion{
         //     }
         // }
 
-        int pl = 0, pr = 0;
-        int sum = 0;
-        while(pl < N && pr < N){
-            if(sum == M){
-                cnt++;
-            }
-            if(sum < M){
-                sum += arr[pr++];
-            }else{
-                sum-= arr[pl++];
-            }
+        // 내가 제출한 방식
+        // int pl = 0, pr = 0;
+        // int sum = 0;
+        // while(pl < N || pr < N){
+        //     if(sum == M)
+        //         cnt++;
+
+        //     if(sum < M && pr<N){
+        //         sum += arr[pr++];
+        //     }else{
+        //         sum-= arr[pl++];
+        //     }
+        // }
+
+        // 강사 방식
+        // int sum = 0, lt = 0;
+        // for(int rt=0; rt<N; rt++){
+        //     sum += arr[rt];
+        //     if(sum == M)
+        //         cnt++;
+        //     while(sum >= M){
+        //         sum -= arr[lt++];
+        //         if(sum == M)
+        //             cnt++;
+        //     }
+        // }
+
+        // int sum = 0, lt=0, rt=0;
+        // while(lt < N || rt < N){
+        //     if(sum == M) cnt++;
+
+        //     if(sum < M && rt<N){
+        //         sum += arr[rt++];
+        //     }else{
+        //         sum -= arr[lt++];
+        //     }
+        // }
+
+        // 강사방식        
+        int sum=0, lt=0;
+        for(int rt=0; rt<N; rt++){
+            sum += arr[rt];
+            if(sum == M) cnt++;
+
+            while(sum >= M){
+                sum -= arr[lt++];
+                if(sum == M) cnt++;
+            }            
+            
         }
 
 
