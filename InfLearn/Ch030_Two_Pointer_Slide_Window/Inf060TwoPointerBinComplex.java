@@ -72,14 +72,28 @@ public class Inf060TwoPointerBinComplex{
         //     cnt = Math.max(cnt, rt - lt +1);
         // }
 
+        // int cnt =0, using=0, lt=0;
+        // for(int rt=0; rt<N; rt++){
+        //     if(arr[rt] == 0) using++;
+        //     while(using > K){
+        //         if(arr[lt] == 0) using--;
+        //         lt++;
+        //     }
+        //     cnt = Math.max(cnt, rt - lt +1);
+
+        // }
+
+
         int cnt =0, using=0, lt=0;
         for(int rt=0; rt<N; rt++){
-            if(arr[rt] == 0) using++;
-            while(using > K){
-                if(arr[lt] == 0) using--;
-                lt++;
+            if(arr[rt] == 0){
+                using++;
+                while(using > K){
+                    if(arr[lt] == 0) using--;
+                    lt++;
+                }
             }
-            cnt = Math.max(cnt, rt - lt +1);
+            cnt = Math.max(cnt, rt - lt + 1);
 
         }
 

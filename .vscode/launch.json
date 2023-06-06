@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf040TwoPointerHashAnagram",
+            "request": "launch",
+            "mainClass": "Inf040TwoPointerHashAnagram",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf030TwoPointHashmap",
+            "request": "launch",
+            "mainClass": "Inf030TwoPointHashmap",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
             "name": "Inf040ArraySubSumPermutaion",
             "request": "launch",
             "mainClass": "Inf040ArraySubSumPermutaion",

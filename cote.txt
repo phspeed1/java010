@@ -178,3 +178,21 @@ Infrun Ch3.Two pointers, Sliding window[효율성 : O(n^2)-->O(n)]
 	나는 실패. 투포인터로 가면서 0/1 판단후 0이면 K만큼 쓸수있는 찬스를 사용했는지 여부를 봐서 sum 감소 시키려 했으나 실패
 	연속된 길이 : rt - lt +1 하고, rt는 항상 0 을 만나면 1로 바꾸고, lt 는 다음번 0 다음을 가리킴. 1다 지나간 후 0에서 찬스 지우고 다음칸 가있음.
 	찬스 쓰고 증가.
+
+Infrun Ch4.HashMap, TreeSet (해쉬, 정렬지원 Set)
+2. 아나그램
+	나는 별도 루프돌려서 map1, map2 를 비교했지만
+	강사방식은 : map1 만들어 놓은 후에   char c 에 대해서 
+	if(!map1.containsKey(c) || map1.get(c) == 0) return flase; 
+	map1.put(c, map1.get(c) -1);
+
+3. 모든매출액의 종류
+	슬라이드 윈도우 + map 문제, map.size() 로 판단 할것이면, 카운트 -1 해준후 카운트가 0이면 map.remove() 해줘야 한다. 배열인덱스 주의
+
+4. 모든 아나그램 찾기
+	나는 map1, map2 만들고 str 에 대해서 슬라이딩 윈도우로 돌면서 map2 루프문으로 비교했지만
+	강사방식은 - map1 에 value 0 이면 remove 하고 map1.equls(map2) 로 편하게 비교했음
+
+5. K번째 큰 수
+	나는 조합 재귀함수에서 HashSet 사용, 다시 ArrayList 에 넣고 Collections.sort 했지만
+	강사방식은 - 3중 for 문에서 TreeSet 에 Collections.reverseOrder() 사용 이후 for 에서 K번째 리턴
