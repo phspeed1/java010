@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf060LinkedList",
+            "request": "launch",
+            "mainClass": "Inf060LinkedList",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf050LaserBeamCutter",
+            "request": "launch",
+            "mainClass": "Inf050LaserBeamCutter",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf040TwoPointerHashAnagram",
             "request": "launch",
             "mainClass": "Inf040TwoPointerHashAnagram",
