@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf030InsertSort",
+            "request": "launch",
+            "mainClass": "Inf030InsertSort",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf010SelectionSort",
+            "request": "launch",
+            "mainClass": "Inf010SelectionSort",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf010SelectionSort",
+            "request": "launch",
+            "mainClass": "Ch060_Sort.Inf010SelectionSort",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
             "name": "Inf080Queue",
             "request": "launch",
             "mainClass": "Inf080Queue",

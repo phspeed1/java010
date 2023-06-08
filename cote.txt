@@ -205,8 +205,9 @@ Infrun Ch4.HashMap, TreeSet (해쉬, 정렬지원 Set)
 	나는 조합 재귀함수에서 HashSet 사용, 다시 ArrayList 에 넣고 Collections.sort 했지만
 	강사방식은 - 3중 for 문에서 TreeSet 에 Collections.reverseOrder() 사용 이후 for 에서 K번째 리턴
 
+--------------------------------
 Infrun Ch5.Stack, Queue(자료구조)
-
+--------------------------------
 4. 후위식 연산(postfix)
 	내가 실수한 것은 Stack 에서 꺼냈을 때 '+', '*' 는 순서에 상관 없지만, '-', '/'는 stack 에서 두번째 pop 한 값에서 첫번째 pop 한 값을 -, / 연산 해야 한다.
 	중위식을 후위식으로 변경하는 방법 1.숫자 : 큐 offer, 2.여는괄호 : 스텍 push, 3.닫는괄호 : 여는괄호나올때까지 pop 하고 큐 offer, 
@@ -223,3 +224,8 @@ Infrun Ch5.Stack, Queue(자료구조)
 	처음 실수한것은 : K번째여서 뺀 경우 idx 를 그대로 두고 list.size() 와 같으면 0 으로 하고, 빼지 않은 경우는 그냥 idx++ 한 후에  list.size() 와 같으면 0 으로 해야 한다.
 	하지만 강사방식은 : i % K != 0 일때는 queue.offer(queue.poll()); 로 순환, 만약 K번째일 때는 queue.poll() 로 비워 버린다.
 
+--------------------------------
+Infrun Ch6.Sorting and Searching(정렬, 이분검색과 결정알고리즘)
+--------------------------------
+3. 삽입정렬
+	삽입정렬은 이중루프 안에서 정렬부분을 늘라가는 방식으로 i 번째 대상 시  j=i-1 부터 시작해서 arr[j] > arr[i]의값이 작은동안 arr[j+1] = arr[j]로 쉬프트 후 루프 종료하면 arr[j+1] = arr[i] 로 삽입
