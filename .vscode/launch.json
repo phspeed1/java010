@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf080Queue",
+            "request": "launch",
+            "mainClass": "Inf080Queue",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf070Queue",
+            "request": "launch",
+            "mainClass": "Inf070Queue",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf060LinkedList",
             "request": "launch",
             "mainClass": "Inf060LinkedList",

@@ -7,16 +7,16 @@ public class Inf060Queue{
         int N = 8; //7
         int K = 3;
         N = 20; // 20
-        // String str = "";
-        // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        // try{
-        //     str = br.readLine();
-        //     String[] arr = str.split(" ");
-        //     N = Integer.parseInt(arr[0]); 
-        //     K = Integer.parseInt(arr[1]); 
-        // }catch(IOException ioe){
-        //     ioe.printStackTrace();
-        // }
+        String str = "";
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        try{
+            str = br.readLine();
+            String[] arr = str.split(" ");
+            N = Integer.parseInt(arr[0]); 
+            K = Integer.parseInt(arr[1]); 
+        }catch(IOException ioe){
+            ioe.printStackTrace();
+        }
     
         int rtn = new Inf060Queue().solution(N, K);
         System.out.println(rtn);
@@ -39,5 +39,7 @@ public class Inf060Queue{
         }
         return queue.poll();
     }
+
+
 
 }

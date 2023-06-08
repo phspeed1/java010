@@ -19,13 +19,16 @@ public class Inf070Queue{
     }
     
     private String solution(String mandatory, String str){
+        Queue<Character> Q = new LinkedList<Character>();
         Queue<Character> queue = new LinkedList<Character>();
+        for(char c : mandatory.toCharArray()) Q.offer(c);
         for(char c : str.toCharArray()) queue.offer(c);
 
-        for(char c : mandatory.toCharArray()){
-            
+        while(!Q.isEmpty()){
+            char c = Q.poll();
+            if(!queue.contains(c)) return "NO";
+            while(queue.poll() != c){}
         }
-
 
        return "YES";
     }
