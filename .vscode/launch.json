@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf090MusicVideo",
+            "request": "launch",
+            "mainClass": "Inf090MusicVideo",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf080BinarySearch",
+            "request": "launch",
+            "mainClass": "Inf080BinarySearch",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf070SortComparable",
+            "request": "launch",
+            "mainClass": "Inf070SortComparable",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf051DupCheck",
+            "request": "launch",
+            "mainClass": "Inf051DupCheck",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf050DupCheck",
+            "request": "launch",
+            "mainClass": "Inf050DupCheck",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf030InsertSort",
             "request": "launch",
             "mainClass": "Inf030InsertSort",
