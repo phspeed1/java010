@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf080SearchCow",
+            "request": "launch",
+            "mainClass": "Inf080SearchCow",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf070BFSTree",
+            "request": "launch",
+            "mainClass": "Inf070BFSTree",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf060SubSet",
+            "request": "launch",
+            "mainClass": "Inf060SubSet",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf020RecursiveBin",
+            "request": "launch",
+            "mainClass": "Inf020RecursiveBin",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf100Stables",
+            "request": "launch",
+            "mainClass": "Inf100Stables",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf090MusicVideo",
             "request": "launch",
             "mainClass": "Inf090MusicVideo",
