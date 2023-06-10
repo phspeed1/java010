@@ -24,9 +24,19 @@ public class Inf090DfsTreeMinLastChild{
         root.rt = new Node(3);
         root.lt.lt = new Node(4);
         root.lt.rt = new Node(5);
+        root.rt.lt = new Node(6);
+        root.rt.rt = new Node(7);
         
-
+        int minLastChildPath = dfs(root, 0);
+        buff.append(minLastChildPath);
         return buff.toString();
+    }
+
+    int dfs(Node root, int lev){
+        if(root.rt == null && root.lt == null)
+            return lev;
+        return Math.min(dfs(root.lt, lev+1), dfs(root.rt, lev+1));
+
     }
 
 

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf090DfsTreeMinLastChild",
+            "request": "launch",
+            "mainClass": "Inf090DfsTreeMinLastChild",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf080SearchCow",
             "request": "launch",
             "mainClass": "Inf080SearchCow",
