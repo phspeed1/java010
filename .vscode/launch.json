@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf050PermutationDup",
+            "request": "launch",
+            "mainClass": "Inf050PermutationDup",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf050CombinationDup",
+            "request": "launch",
+            "mainClass": "Inf050CombinationDup",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf041PermutationDup",
+            "request": "launch",
+            "mainClass": "Inf041PermutationDup",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf040PermutationDup",
             "request": "launch",
             "mainClass": "Inf040PermutationDup",
