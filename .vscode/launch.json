@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf010SubSetSumEqual",
+            "request": "launch",
+            "mainClass": "Inf010SubSetSumEqual",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf090DfsTreeMinLastChild",
             "request": "launch",
             "mainClass": "Inf090DfsTreeMinLastChild",

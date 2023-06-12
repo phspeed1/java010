@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Inf010SubSetSumEqual{
+public class Inf011SubSetSumEqual{
 
     public static void main(String[] args){
         int N = 6;
@@ -15,7 +15,7 @@ public class Inf010SubSetSumEqual{
             ioe.printStackTrace();
         }
     
-        String rtn = new Inf010SubSetSumEqual().solution(str, N);
+        String rtn = new Inf011SubSetSumEqual().solution(str, N);
         System.out.println(rtn);
     }
     
@@ -27,35 +27,25 @@ public class Inf010SubSetSumEqual{
         for(int i=0; i<strArr.length; i++) arr[i] = Integer.parseInt(strArr[i]);
         // Initial end
         ////////////////////////////////
-        int sum = Arrays.stream(arr).sum();
-        List<Integer> list = new ArrayList<Integer>();
+        int total = Arrays.stream(arr).sum();
         answer = false;
-        combination(arr, N, sum, list, 0);
+        DFS(arr, N, total, 0, 0);
        
         return answer?"YES":"NO";
     }
 
-    void combination(int[] arr, int N, int sum, List<Integer> list, int lv){
-        if(lv >= N) return;
+    void DFS(int[] arr, int N, int total, int lv, int sum){
+        if(lv == N) return;
+        if(total / 2 < sum) return;
 
-        if(lv != 0) answer = answer || (sum-getSum(list) == getSum(list));
-        if(answer) {
-   //         System.out.println("sum : "+(sum-getSum(list))+"!="+(getSum(list))+" list ("+getSum(list)+") : "+list);
-           return;
-        }
+        System.out.println("total : "+total + "sum : "+sum);
+        if(total - sum == sum) answer = true;
+        if(answer) return;
 
-        for(int i=lv; i<N; i++){
-            list.add(arr[i]);
-            combination(arr, N, sum, list, i+1);
-            list.remove(list.size()-1);
-        }
+        DFS(arr, N, total, lv+1, sum);
+        DFS(arr, N, total, lv+1, sum+arr[lv]);
     }
 
-    int getSum(List<Integer> list){
-        int sum = 0;
-        for(int i:list) sum+=i;
-        return sum;
-    }
 
 
 }
