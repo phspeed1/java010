@@ -40,7 +40,7 @@ public class Inf050PermutationDup{
         this.M = M;
 
         int[] arr2 = new int[N];
-        Arrays.sort(arr1, Collections.reverseOrder());
+        Arrays.sort(arr1);
         for(int i=0; i<N; i++){
             arr2[N-1 -i] = arr1[i];
         }

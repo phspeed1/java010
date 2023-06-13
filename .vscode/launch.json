@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf070CombinationMemeCount",
+            "request": "launch",
+            "mainClass": "Inf070CombinationMemeCount",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf060Permutation",
+            "request": "launch",
+            "mainClass": "Inf060Permutation",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
             "name": "Inf050PermutationDup",
             "request": "launch",
             "mainClass": "Inf050PermutationDup",
