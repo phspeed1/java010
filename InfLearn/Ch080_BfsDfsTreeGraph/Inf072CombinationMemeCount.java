@@ -11,10 +11,10 @@ public class Inf072CombinationMemeCount{
         int[] arr = new int[N];
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try{
-            // str = br.readLine();
-            // strArr = str.split(" ");
-            // N = Integer.parseInt(strArr[0]);
-            // M = Integer.parseInt(strArr[0]);
+            str = br.readLine();
+            strArr = str.split(" ");
+            N = Integer.parseInt(strArr[0]);
+            M = Integer.parseInt(strArr[1]);
             // str = br.readLine();
             // arr = new int[N];
             // strArr = str.split(" ");

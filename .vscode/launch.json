@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf100DFSBoard",
+            "request": "launch",
+            "mainClass": "Inf100DFSBoard",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf090Combination",
+            "request": "launch",
+            "mainClass": "Inf090Combination",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf070CombinationMemeCount",
             "request": "launch",
             "mainClass": "Inf070CombinationMemeCount",
