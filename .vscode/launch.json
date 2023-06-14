@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf151DfsCombiPizza",
+            "request": "launch",
+            "mainClass": "Inf151DfsCombiPizza",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf150DfsCombiPizza",
+            "request": "launch",
+            "mainClass": "Inf150DfsCombiPizza",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf140IslnadCountBFS",
+            "request": "launch",
+            "mainClass": "Inf140IslnadCountBFS",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf130IslnadCountDFS",
+            "request": "launch",
+            "mainClass": "Inf130IslnadCountDFS",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf120BFSTomatoBoard",
+            "request": "launch",
+            "mainClass": "Inf120BFSTomatoBoard",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf110BFSBoard",
+            "request": "launch",
+            "mainClass": "Inf110BFSBoard",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
             "name": "Inf100DFSBoard",
             "request": "launch",
             "mainClass": "Inf100DFSBoard",
