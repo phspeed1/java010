@@ -13,7 +13,7 @@ public class Inf150DfsCombiPizza{
             str = br.readLine();
             N = Integer.parseInt(str.split(" ")[0]);
             M = Integer.parseInt(str.split(" ")[1]);
-            strArr = new String[N][M];
+            strArr = new String[N][N];
 
             for(int i=0; i<N; i++){
                 str = br.readLine();

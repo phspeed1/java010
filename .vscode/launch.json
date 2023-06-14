@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf020GreadyConfRoom",
+            "request": "launch",
+            "mainClass": "Inf020GreadyConfRoom",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf011Gready",
+            "request": "launch",
+            "mainClass": "Inf011Gready",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf010Gready",
+            "request": "launch",
+            "mainClass": "Inf010Gready",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf151DfsCombiPizza",
             "request": "launch",
             "mainClass": "Inf151DfsCombiPizza",
