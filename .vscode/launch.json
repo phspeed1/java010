@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf072MinSpaningTreePrim",
+            "request": "launch",
+            "mainClass": "Inf072MinSpaningTreePrim",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf071MinSpaningTree",
+            "request": "launch",
+            "mainClass": "Inf071MinSpaningTree",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf061UnionFind",
             "request": "launch",
             "mainClass": "Inf061UnionFind",
