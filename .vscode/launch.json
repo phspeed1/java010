@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf061UnionFind",
+            "request": "launch",
+            "mainClass": "Inf061UnionFind",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf060UnionFind",
+            "request": "launch",
+            "mainClass": "Inf060UnionFind",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf052Dijkstra",
+            "request": "launch",
+            "mainClass": "Inf052Dijkstra",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf051Dijkstra",
+            "request": "launch",
+            "mainClass": "Inf051Dijkstra",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf050Dijkstra",
+            "request": "launch",
+            "mainClass": "Inf050Dijkstra",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf040MaxIncomeSchedule",
+            "request": "launch",
+            "mainClass": "Inf040MaxIncomeSchedule",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf032GreadyWeddingAttend",
+            "request": "launch",
+            "mainClass": "Inf032GreadyWeddingAttend",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf031GreadyWeddingAttend",
+            "request": "launch",
+            "mainClass": "Inf031GreadyWeddingAttend",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
+            "name": "Inf030GreadyWeddingAttend",
+            "request": "launch",
+            "mainClass": "Inf030GreadyWeddingAttend",
+            "projectName": "java010_73416584"
+        },
+        {
+            "type": "java",
             "name": "Inf020GreadyConfRoom",
             "request": "launch",
             "mainClass": "Inf020GreadyConfRoom",
