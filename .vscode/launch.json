@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inf060NapsackMaxScore",
+            "request": "launch",
+            "mainClass": "Inf060NapsackMaxScore",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf050CoinDraw",
+            "request": "launch",
+            "mainClass": "Inf050CoinDraw",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf042LisBricks",
+            "request": "launch",
+            "mainClass": "Inf042LisBricks",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf041LisBricks",
+            "request": "launch",
+            "mainClass": "Inf041LisBricks",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf040LisBricks",
+            "request": "launch",
+            "mainClass": "Inf040LisBricks",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf030LisMaxNumIncreasePem",
+            "request": "launch",
+            "mainClass": "Inf030LisMaxNumIncreasePem",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf020StoneStep",
+            "request": "launch",
+            "mainClass": "Inf020StoneStep",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
+            "name": "Inf010StepCliming",
+            "request": "launch",
+            "mainClass": "Inf010StepCliming",
+            "projectName": "java010_47996499"
+        },
+        {
+            "type": "java",
             "name": "Inf072MinSpaningTreePrim",
             "request": "launch",
             "mainClass": "Inf072MinSpaningTreePrim",
