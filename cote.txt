@@ -14,6 +14,8 @@
 * Quick Sort
  . pivot 값을 기준으로 작은파티션 큰파티션으로 나누는 것을 반복
  . swap 이용
+ * Insert Sort
+ . 내 앞의수는 정렬이 되있다고 가정, i 와 한칸 앞에서부터 j-- 와 비교해서 j값이 i값보다 크면 우측으로 한칸 Shift
 
 # 탐색(DFS, BFS)
 DFS 는 Stack 또는 콜스텍 이용
