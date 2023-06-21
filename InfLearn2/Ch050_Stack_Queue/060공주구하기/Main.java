@@ -13,8 +13,15 @@ public class Main{
 	int solution(int N, int K){
 		int ans = 0;
 		
-		Stack<Integer> stack = new Stack<Integer>();
+		Queue<Integer> q = new LinkedList<Integer>();
+		for(int i=1; i<=N; i++) q.offer(i);
 
+		while(!q.isEmpty()){
+			for(int i=0; i<K-1; i++){
+				q.offer(q.poll());
+			}
+			ans = q.poll();
+		}
 		return ans;
 	}
 
