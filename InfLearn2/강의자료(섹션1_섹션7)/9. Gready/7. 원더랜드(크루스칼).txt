@@ -5,7 +5,7 @@ class Edge implements Comparable<Edge>{
 	public int cost;
     Edge(int v1, int v2, int cost) {
         this.v1 = v1;
-		this.v2 = v2;
+		    this.v2 = v2;
         this.cost = cost;
     }
     @Override
