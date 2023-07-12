@@ -32,8 +32,56 @@ public class Main{
 
 	String solution(int N, int M, int[][] arr){
 		String answer = "";
+		int[] dy = new int[N+1];
+		Arrays.fill(dy, Integer.MAX_VALUE);
+		
+		List<List<Edge>> list = new ArrayList<>();
+		for(int i=0; i<= N; i++){
+			list.add(new ArrayList<Edge>());
+		}
+
+		for(int[] ar : arr){
+			list.get(ar[0]).add(new Edge(ar[1], ar[2]));
+		}
+
+		dy[1] = 0;
+
+		PriorityQueue<Edge> pq  = new PriorityQueue<Edge>();
+		pq.offer(new Edge(1, 0));
+
+		while(!pq.isEmpty()){
+			Edge now = pq.poll();
+			int nowNode = now.node;
+			int nowCost = now.cost;
+
+			for(Edge next : list.get(nowNode)){
+				int nextNode = next.node;
+				int nextCost = next.cost;
+				if(nowCost + nextCost < dy[nextNode]){
+					dy[nextNode] = nowCost + nextCost;
+					pq.offer(new Edge(nextNode, nowCost + nextCost));
+				}
+			}
+		}
+
+		for(int i=2; i<=N; i++){
+			System.out.println(i+" : "+(dy[i]==Integer.MAX_VALUE?"impossible":String.valueOf(dy[i])));
+		}
+
+		
 
 		return answer;
+	}
+
+	class Edge implements Comparable<Edge>{
+		int node, cost;
+		Edge(int node, int cost){
+			this.node = node;
+			this.cost = cost;
+		}
+		public int compareTo(Edge o){
+			return this.cost - o.cost;
+		}
 	}
 
 
