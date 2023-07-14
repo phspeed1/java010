@@ -21,8 +21,42 @@ public class Main{
 	int solution(int V, int E, int[][] arr){
 		int answer = 0;
 
+		List<List<Edge>> list = new ArrayList<>();
+		for(int i=0; i<E; i++) list.add(new ArrayList<Edge>());
+
+		for(int[] ar : arr){
+			list.get(ar[0]).add(new Edge(ar[1], ar[2]));
+			list.get(ar[1]).add(new Edge(ar[0], ar[2]));
+		}
+
+		boolean[] ch = new boolean[V+1];
+
+		PriorityQueue<Edge> pq = new PriorityQueue<Edge>();
+		pq.add(new Edge(1, 0));
+
+		while(!pq.isEmpty()){
+			Edge temp = pq.poll();
+			if(ch[temp.vtx]) continue;
+			ch[temp.vtx] = true;
+			answer += temp.cost;
+			for(Edge edge : list.get(temp.vtx)){
+//				if(ch[edge.vtx]) continue;
+				pq.offer(edge);
+			}
+		}
 
 		return answer;
+	}
+
+	class Edge implements Comparable<Edge>{
+		int vtx,  cost;
+		Edge(int vtx, int cost){
+			this.vtx = vtx;
+			this.cost = cost;
+		}
+		public int compareTo(Edge o){
+			return this.cost - o.cost;
+		}
 	}
 
 }
