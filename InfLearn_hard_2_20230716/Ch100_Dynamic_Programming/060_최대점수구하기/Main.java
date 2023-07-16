@@ -19,6 +19,17 @@ public class Main{
 	int solution(int N, int[][] arr, int M){	
 		int answer = 0;
 
+		int[] dp = new int[M+1];
+
+		for(int[] ar : arr){
+			int sc = ar[0];
+			int tm = ar[1];
+			for(int j=M; j>=tm; j--){
+				dp[j] = Math.max(dp[j], dp[j - tm]+sc);
+			}
+		}
+		answer = dp[M];
+
 
 		return answer;
 	}

@@ -17,9 +17,37 @@ public class Main{
 	int solution(int N, int M, int[] arr){
 		int ans = 0;
 
+		int lt = Arrays.stream(arr).max().getAsInt();
+		int rt = Arrays.stream(arr).sum();
 
+		while(lt <= rt){
+			int mid = (lt + rt)/2;
+			int cnt = cntNeedDvd(arr, mid);
+			if(cnt <= M){
+				ans = mid;
+				rt = mid-1;
+			}else{
+				lt = mid+1;
+			}
+		}
 
 		return ans;
+	}
+
+	int cntNeedDvd(int[] arr, int capacity){
+		int cnt = 1;
+		int sum = arr[0];
+
+		for(int i=1; i<arr.length; i++){
+			if(sum + arr[i] > capacity){
+				cnt++;
+				sum = arr[i];
+			}else{
+				sum += arr[i];
+			}
+		}
+
+		return cnt;
 	}
 
 

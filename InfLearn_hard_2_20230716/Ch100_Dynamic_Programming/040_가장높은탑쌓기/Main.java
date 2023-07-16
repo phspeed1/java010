@@ -18,8 +18,33 @@ public class Main{
 
 	int solution(int N, int[][] arr){	
 		int answer = 0;
+		List<Brick> list = new ArrayList<Brick>();
+		for(int[] ar : arr) list.add(new Brick(ar[0], ar[1], ar[2]));
+		Collections.sort(list);
+
+		int[] dp = new int[N];
+		for(int i=0; i<N; i++){
+			int maxHt = 0;
+			int weight = list.get(i).wg;
+			int height = list.get(i).ht;
+			for(int j=i; j>=0; j--){
+				if(weight < list.get(j).wg) maxHt = Math.max(maxHt, dp[j]);
+			}
+			dp[i] = maxHt + height;
+			answer = Math.max(answer, dp[i]);
+		}
 
 		return answer;
+	}
+
+	class Brick implements Comparable<Brick>{
+		int wt, ht, wg;
+		Brick(int wt, int ht, int wg){
+			this.wt=wt; this.ht=ht; this.wg=wg;
+		}
+		public int compareTo(Brick o){
+			return o.wt - this.wt;
+		}
 	}
 
 }

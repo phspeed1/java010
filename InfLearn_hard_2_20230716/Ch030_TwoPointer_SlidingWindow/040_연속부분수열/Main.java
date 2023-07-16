@@ -20,6 +20,16 @@ public class Main{
 
 	int solution(int N, int M, int[] arr){
 		int ans = 0;
+		
+		int sum=0; int lt=0;
+		for(int rt=0; rt<N; rt++){
+			sum+=arr[rt];
+			if(sum == M) ans++;
+			while(sum >= M){
+				sum -= arr[lt++];
+				if(sum == M) ans++;
+			}
+		}
 
 		return ans;
 	}

@@ -17,11 +17,38 @@ public class Main{
 	int solution(int N, int C, int[] arr){
 		int ans = 0;
 
+		Arrays.sort(arr);
+		int lt = 1;
+		int rt = arr[N-1] - arr[0];
+
+		while(lt <= rt){
+			int mid = (lt + rt) / 2;
+			int cnt = cntCanStall(arr, mid);
+	//		System.out.println("distance : "+mid + ", canStall : "+cnt);
+			if(cnt >= C){
+				ans = mid;
+				lt = mid+1;
+			}else{
+				rt = mid-1;
+			}
+		}
 		
 
 
 		return ans;
 	}
 
+	int cntCanStall(int[] arr, int distance){
+		int cnt = 1;
+		int ep = arr[0];
 
+		for(int i=1; i<arr.length; i++){
+			if(arr[i] - ep >= distance){
+				cnt++;
+				ep = arr[i];
+			}
+
+		}
+		return cnt;
+	}
 }

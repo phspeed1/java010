@@ -21,7 +21,27 @@ public class Main{
 	int solution(int N, int K, int[] arr){
 		int ans = 0;
 
+		int cnt = 0;
+		int lt=0;
+		int dis=0;
+		for(int rt=0; rt<N; rt++){
+			if(arr[rt] == 0) cnt++;
+			while(cnt > K){
+				if(arr[lt] ==0)cnt--;
+				lt++;
+			}
+			ans = Math.max(ans, (rt+1)-lt);
+		}
+
 
 		return ans;
 	}
 }
+/*
+1 1 0 0 1 1 0 1 1 0 1 1 0 1
+1 1 1 1 1 1 1
+    1 2     3
+	  l     r
+	              r
+
+*/

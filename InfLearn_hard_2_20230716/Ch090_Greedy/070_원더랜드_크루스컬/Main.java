@@ -20,9 +20,44 @@ public class Main{
 
 	int solution(int V, int E, int[][] arr){
 		int answer = 0;
+		unf = new int[V+1];
+		for(int i=0; i<=V; i++) unf[i] = i;
+
+		PriorityQueue<Edge> pq = new PriorityQueue<Edge>();
+		for(int[] ar : arr)
+			pq.offer(new Edge(ar[0], ar[1], ar[2]));
+
+		while(!pq.isEmpty()){
+			Edge edge = pq.poll();
+			if(find(edge.v1) != find(edge.v2)){
+				union(edge.v1, edge.v2);
+				answer += edge.cost;
+			}
+		}
 
 
 		return answer;
+	}
+
+	int[] unf;
+	int find(int v){
+		if(unf[v] == v) return v;
+		return unf[v] = find(unf[v]);
+	}
+	void union(int v1, int v2){
+		int f1 = find(v1);
+		int f2 = find(v2);
+		if(f1 != f2) unf[f1] = unf[f2];
+	}
+
+	class Edge implements Comparable<Edge>{
+		int v1, v2, cost;
+		Edge(int v1, int v2, int cost){
+			this.v1=v1; this.v2=v2; this.cost=cost;
+		}
+		public int compareTo(Edge o){
+			return this.cost - o.cost;
+		}
 	}
 
 }
