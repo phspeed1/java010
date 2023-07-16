@@ -19,20 +19,10 @@ public class Main{
 	int solution(int N, int[][] arr, int M){	
 		int answer = 0;
 
-		int[] dp = new int[M+1];
-
-		for(int i=0; i<N; i++){
-			int score = arr[i][0];
-			int time = arr[i][1];
-			for(int j=M; j>=time; j--){
-				dp[j] = Math.max(dp[j], dp[j - time]+score);
-			}
-		//	System.out.println(Arrays.toString(dp));
-		}
-		answer = dp[M];
 
 		return answer;
 	}
+
 
 
 }
