@@ -20,7 +20,20 @@ public class Main{
 
 	int solution(int N, int K, int[] arr){
 		int ans = 0;
+		
+		int cnt =0;
+		int lt=0;
+		for(int rt=0; rt<N; rt++){
+			if(arr[rt] == 0) cnt++;
 
+			while(cnt > K){
+				if(arr[lt] == 0) cnt--;
+				lt++;
+			}
+
+			int leng = rt + 1 - lt;
+			ans = Math.max(ans, leng);
+		}
 
 		return ans;
 	}

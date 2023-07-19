@@ -12,7 +12,12 @@ public class Main{
 	}
 
 	String solution(int N, int[] arr){
-		String answer = "";
+		String answer = "U";
+
+		Arrays.sort(arr);
+		for(int i=0; i<N-1; i++){
+			if(arr[i] == arr[i+1]) return "D";
+		}
 
 		return answer;
 	}

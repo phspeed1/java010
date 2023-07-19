@@ -18,6 +18,11 @@ public class Main{
 	String solution(int N, int[] nums){
 		String answer = "";
 
+		answer += nums[0] + " ";
+		for(int i=1; i<N; i++){
+			if(nums[i-1] < nums[i]) answer += nums[i] + " ";
+		}
+
 
 		return answer;
 	}

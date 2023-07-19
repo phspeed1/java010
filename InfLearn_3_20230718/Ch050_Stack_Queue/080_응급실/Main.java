@@ -12,72 +12,42 @@ public class Main{
 		System.out.println(new Main().solution(N, M, arr));
 	}
 
+
 	int solution(int N, int M, int[] arr){
 		int ans = 0;
-		Queue<Person> queue = new LinkedList<Person>();
 		
-		for(int i=0; i<N; i++) queue.offer(new Person(i, arr[i]));
-
-		while(!queue.isEmpty()){
-			Person tmp = queue.poll();
-
-			for(Person x: queue){
-				if(x.pt > tmp.pt){
-					queue.offer(tmp);
-					tmp = null;
-					break;
-				}
-			}
-			if(tmp != null){
-				ans++;
-				if(tmp.no == M) return ans;
-			}
-		}
-
-		return ans;
-	}
-
-	int solution1(int N, int M, int[] arr){
-		int ans = 0;
-		PriorityQueue<Person> pq = new PriorityQueue<Person>();
-		Queue<Person> queue = new LinkedList<Person>();
-		
+		Queue<Person> q = new LinkedList<Person>();
 		for(int i=0; i<N; i++){
-			Person person = new Person(i, arr[i]);
-			pq.offer(person);
-			queue.offer(person);
+			q.offer(new Person(i, arr[i]));
 		}
-
-		while(!pq.isEmpty()){
-			Person max = pq.poll();
-
-			while(!queue.isEmpty()){
-				Person p = queue.poll();
-
-				// System.out.println(max + " "+p);
-				if(max.pt == p.pt){
-					ans++;
-					if(p.no == M) return ans;
-					break;
-				}
-				queue.offer(p);
+		while(!q.isEmpty()){
+			Person p = q.poll();
+			boolean first = true;
+			for(Person t : q){
+				if(t.priority > p.priority) first = false;
+			}
+			if(first) {
+				ans++;
+				if(p.no == M) break;
+			}else{
+				q.offer(p);
 			}
 		}
-
 		return ans;
 	}
 
 	class Person implements Comparable<Person>{
-		int no, pt;
-		Person(int no, int pt){
+		int no, priority;
+		Person(int no, int priority){
 			this.no = no;
-			this.pt = pt;
+			this.priority = priority;
 		}
 		public int compareTo(Person o){
-			return o.pt - this.pt;
+			if(o.priority == this.priority) return this.no - o.no;
+			return o.priority - this.priority;
 		}
 		public String toString(){
-			return "{no:"+no+"pt:"+pt+"}";
+			return "{no:"+this.no+",pri:"+this.priority+"}";
 		}
 	}
 

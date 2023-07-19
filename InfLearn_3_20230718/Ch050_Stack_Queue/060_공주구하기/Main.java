@@ -13,6 +13,15 @@ public class Main{
 	int solution(int N, int K){
 		int answer = 0;
 		
+		Queue<Integer> queue = new LinkedList<Integer>();
+		for(int i=1; i<=N; i++) queue.offer(i);
+
+		int i = 1;
+		while(!queue.isEmpty()){
+			answer = queue.poll();
+			if(i % K != 0) queue.offer(answer);
+			i++;
+		}
 
 
 		return answer;

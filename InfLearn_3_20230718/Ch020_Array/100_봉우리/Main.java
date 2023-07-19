@@ -20,6 +20,22 @@ public class Main{
 
 	int solution(int N, int[][] arr){
 		int answer = 0;
+		int[] dx = {-1, 0, 1, 0};
+		int[] dy = {0, 1, 0, -1};
+
+		for(int i=0; i<N; i++){
+			for(int j=0; j<N; j++){
+				int num = arr[i][j];
+				int p = 1;
+				for(int k=0; k<4; k++){
+					int nx = i + dx[k];
+					int ny = j + dy[k];
+
+					if(nx >=0 && nx <N && ny >=0 && ny <N && arr[i][j] <= arr[nx][ny]) p = 0;
+				}
+				answer += p;
+			}
+		}
 		
 		return answer;
 	}

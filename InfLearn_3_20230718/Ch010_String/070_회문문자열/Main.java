@@ -9,7 +9,11 @@ public class Main {
   }
 
 	String solution(String str1){
-		String answer = "";
+		String answer = "YES";
+		char[] arr = str1.toUpperCase().toCharArray();
+		for(int i=0; i< arr.length/2; i++){
+			if(arr[i] != arr[arr.length-1 -i]) return "NO";
+		}
 
 		return answer;
 	}

@@ -13,8 +13,24 @@ public class Main{
 
 	String solution(int N, int[] arr){
 		String answer = "";
+		int min =0;
+		for(int i=0; i<N; i++){
+			min = i;
+			for(int j=i+1; j<N; j++){
+				if(arr[j] < arr[min]) min = j;
+			}
+			swap(arr, i, min);
+		}
+		for(int n : arr) answer += n + " ";
+
 
 		return answer;
+	}
+
+	void swap(int[] arr, int a, int b){
+		int c = arr[a];
+		arr[a] = arr[b];
+		arr[b] = c;
 	}
 
 

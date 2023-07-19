@@ -11,6 +11,15 @@ public class Main {
 	String solution(String str){
 		String answer = "";
 
+		char[] arr = str.toCharArray();
+		for(int i=0; i<arr.length; i++){
+			boolean isBefore = false;
+			for(int j=i-1; j>=0; j--){
+				if(arr[j] == arr[i]) isBefore = true;
+			}
+			if(!isBefore) answer += arr[i];
+		}
+
 		return answer;
 	}
 

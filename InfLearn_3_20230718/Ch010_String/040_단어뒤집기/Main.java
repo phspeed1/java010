@@ -12,6 +12,7 @@ public class Main {
 
 	String solution(String str){
 		String answer = "";
+		answer = new StringBuilder(str).reverse().toString();
 
 		return answer;
 	}

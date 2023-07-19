@@ -24,6 +24,23 @@ public class Main{
 		int ans = 0;
 
 
+		for(int i=1; i<=N; i++){
+			for(int j=1; j<=N; j++){
+				int pc = 0;
+
+				for(int k = 0; k<M; k++){
+					int ig = 0;
+					int jg = 0;
+					for(int l = 0; l <N; l++){
+						if(arr[k][l] == i) ig = l;
+						if(arr[k][l] == j) jg = l;
+					}
+					if(ig > jg) pc++;
+				}
+
+				if(pc == M) ans++;
+			}
+		}
 
 		return ans;
 	}

@@ -11,8 +11,10 @@ public class Main{
 
 	String solution(String word){
 		String answer = "";
-
-
+		for(char c : word.toCharArray()){
+			answer += Character.isUpperCase(c)?Character.toLowerCase(c):Character.toUpperCase(c);
+		}
+		
 		return answer;
 	}
 }

@@ -18,7 +18,26 @@ public class Main{
 
 	int solution(int N, int[][] arr, int M, int[] moves){
 		int answer = 0;
+		Stack<Integer> stack = new Stack<Integer>();
 		
+//		System.out.println(Arrays.deepToString(arr));
+		for(int m : moves){
+			for(int i=0; i<N; i++){
+				if(arr[i][m-1] != 0){
+					int n = arr[i][m-1];
+					arr[i][m-1] = 0;
+
+					if(!stack.isEmpty() && stack.peek() == n){
+						stack.pop();
+						answer += 2;
+					}else{
+						stack.push(n);
+					}
+					break;
+				}
+			}
+//			System.out.println(Arrays.deepToString(arr));
+		}
 
 
 		return answer;

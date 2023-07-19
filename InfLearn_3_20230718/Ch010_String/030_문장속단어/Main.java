@@ -9,7 +9,12 @@ public class Main {
 
 	String solution(String str){
 		String answer = "";
-
+		StringTokenizer st = new StringTokenizer(str, " ");
+		while(st.hasMoreTokens()){
+			String s = st.nextToken();
+			if(s.length() > answer.length()) answer = s;
+			
+		}
 		return answer;
 	}
 

@@ -22,6 +22,15 @@ public class Main{
 	int solution(int N, int M, int[] arr){
 		int answer = 0;
 
+		int sum =0, lt = 0;
+		for(int rt = 0; rt <N; rt++){
+			sum += arr[rt];
+			if(rt >= M){
+				sum -= arr[lt++];
+			}
+			answer = Math.max(answer, sum);
+		}
+
 		return answer;
 	}
 

@@ -20,6 +20,23 @@ public class Main{
 
 	int solution(int N, int[][] arr){
 		int ans = 0;
+		int max = 0;
+
+		for(int i=0; i<N; i++){
+			int cnt = 0;
+			for(int j=0; j<N; j++){
+				for(int k=0; k<5; k++){
+					if(arr[i][k] == arr[j][k]){
+						cnt++;
+						break;
+					}
+				}
+			}
+			if(cnt > max){
+				max = cnt;
+				ans = i+1;
+			}
+		}
 
 
 		return ans;

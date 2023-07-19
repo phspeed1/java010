@@ -13,8 +13,19 @@ public class Main{
 
 	String solution(int N, int[] arr){
 		String answer = "";
+		for(int i =0; i<N; i++){
+			for(int j=0; j<N -1 -i; j++){
+				if(arr[j] > arr[j+1]) swap(arr, j, j+1);
+			}
+		}
+		for(int n : arr) answer += n + " ";
 
 		return answer;
+	}
+	void swap(int[] arr, int a, int b){
+		int c = arr[a];
+		arr[a] = arr[b];
+		arr[b] = c;
 	}
 
 }

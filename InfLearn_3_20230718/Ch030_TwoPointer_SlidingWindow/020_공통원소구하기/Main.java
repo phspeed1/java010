@@ -24,8 +24,18 @@ public class Main{
 	}
 
 
-	String solution(int N, int M, int[] arr1, int[] arr2){
+	String solution(int N1, int N2, int[] arr1, int[] arr2){
 		String answer = "";
+		Arrays.sort(arr1); Arrays.sort(arr2);
+		int i1 = 0;
+		int i2 = 0;
+		while(i1 < N1 && i2 < N2){
+			if(arr1[i1] == arr2[i2]){
+				answer += arr1[i1++] + " ";
+				i2++;
+			}else if(arr1[i1] < arr2[i2]) i1++;
+			else i2++;
+		}
 
 		return answer;
 

@@ -7,7 +7,7 @@ public class Main {
 	int N = 4;
 	String str = "#****###**#####**#####**##**";
 	N = in.nextInt();
-	str = in.nextLine();
+	str = in.next();
 	System.out.println(main.solution(N, str));
     return ;
   }

@@ -18,7 +18,18 @@ public class Main{
 
 	int solution(int N, int[] arr){
 		int ans = 0;
-		
+		int cnt = 0;
+
+		// 1 0 1 1 1 0 0 1 1 0
+		// 1 0 1 2 3 0 0 1 2 0
+		for(int i : arr){
+			if(i == 1){
+				cnt += 1; 
+				ans += cnt;
+			}else{
+				cnt = 0;
+			}
+		}
 
 		return ans;
 	}

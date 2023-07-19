@@ -12,6 +12,13 @@ public class Main {
 
 	int solution(String str){
 		int answer = 0;
+		char[] arr = str.toCharArray();
+		for(char c : arr){
+			if(Character.isDigit(c)){
+				int n = c - '0';
+				answer = answer * 10 + n;
+			}
+		}
 
 		return answer;
 	}

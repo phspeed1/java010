@@ -12,6 +12,22 @@ public class Main{
 	int solution(String str){
 		int answer = 0;
 		
+		Stack<Character> stack = new Stack<Character>();
+		char prev = ' ';
+		for(int i=0; i<str.length(); i++){
+			char c = str.charAt(i);
+			if(c == '('){
+				stack.push(c);
+			}else{
+				if(str.charAt(i-1) == '('){
+					stack.pop();
+					answer += stack.size();
+				}else{
+					stack.pop();
+					answer += 1;
+				}
+			}
+		}
 
 
 		return answer;

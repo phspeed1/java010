@@ -24,8 +24,18 @@ public class Main{
 	}
 
 
-	String solution(int N, int M, int[] arr1, int[] arr2){
+	String solution(int N1, int N2, int[] arr1, int[] arr2){
 		String answer = "";
+		
+		int i1=0;
+		int i2=0;
+
+		while(i1 < N1 && i2 < N2){
+			if(arr1[i1] < arr2[i2]) answer += arr1[i1++] + " ";
+			else answer += arr2[i2++] + " ";
+		}
+		while(i1 < N1) answer += arr1[i1++] + " ";
+		while(i2 < N2) answer += arr2[i2++] + " ";
 
 		return answer;
 	}

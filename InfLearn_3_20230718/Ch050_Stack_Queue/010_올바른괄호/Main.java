@@ -10,8 +10,14 @@ public class Main{
 	}
 
 	String solution(String str){
-		String answer = "";
-
+		String answer = "YES";
+		Stack<Character> stack = new Stack<Character>();
+		for(char c : str.toCharArray()){
+			if(c == '(') stack.push(c);
+			else if(stack.isEmpty()) return "NO";
+			else stack.pop();
+		}
+		if(stack.size() != 0) return "NO";
 		return answer;
 	}
 

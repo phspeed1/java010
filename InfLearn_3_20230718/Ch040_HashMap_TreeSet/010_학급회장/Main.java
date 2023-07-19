@@ -15,6 +15,16 @@ public class Main{
 	char solution(int N, String str){
 		char answer = '0';
 
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		int max = 0;
+		for(char c : str.toCharArray()){
+			map.put(c, map.getOrDefault(c, 0)+1);
+			if(map.get(c) > max){
+				answer = c;
+				max = map.get(c);
+			}
+		}
+
 		return answer;
 	}
 }

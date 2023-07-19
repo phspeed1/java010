@@ -16,7 +16,14 @@ public class Main{
 		System.out.println(new Main().solution(N, nums));
 	}
 	int solution(int N, int[] nums){
-		int answer = 0;
+		int answer = 1;
+		int max = nums[0];
+		for(int i = 1; i<N; i++){
+			if(nums[i] > max){
+				max = nums[i];
+				answer++;
+			}
+		}
 
 		return answer;
 	}

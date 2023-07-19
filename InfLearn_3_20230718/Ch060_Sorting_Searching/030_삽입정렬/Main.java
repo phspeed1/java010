@@ -14,7 +14,32 @@ public class Main{
 	String solution(int N, int[] arr){
 		String answer = "";
 
+		for(int i=1; i<N; i++){
+			int n = arr[i];
+			int j=i-1;
+			for( ; j>=0; j--){
+				if(arr[j] >= n) {
+					arr[j+1] = arr[j];
+				}else{
+					break;
+				}
+			}
+			arr[j+1] = n;
+		}
+		/*
+		11 7 5 6 10 9
+		     7
+		*/
+
+		for(int n : arr) answer += n + " ";
+
 		return answer;
+	}
+
+	void swap(int[] arr, int a, int b){
+		int c = arr[a];
+		arr[a] = arr[b];
+		arr[b] = c;
 	}
 
 }
