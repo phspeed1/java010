@@ -33,10 +33,33 @@ public class Main{
 	int solution(int N, int[][] board){
 		int answer = 0;
 
+		int cnt = 1;
+		for(int x=0; x<N; x++){
+			for(int y=0; y<N; y++){
+				if(board[x][y] == 1){
+					answer++;
+					cnt++;
+					DFS(N, board, new Point(x, y), cnt);
+				}
+			}
+		}
 
 
 		return answer;
 	}
+
+	void DFS(int N, int[][] board, Point p, int cnt){
+		board[p.x][p.y] = cnt;
+
+		for(int i=0; i<8; i++){
+			int nx = p.x + dx[i];
+			int ny = p.y + dy[i];
+			if(nx >=0 && nx <N && ny >=0 && ny <N && board[nx][ny] == 1){
+				DFS(N, board, new Point(nx, ny), cnt);
+			}
+		}
+	}
+
 	
 	class Point{
 		int x, y;

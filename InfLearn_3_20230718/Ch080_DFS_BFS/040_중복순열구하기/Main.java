@@ -3,21 +3,29 @@ public class Main{
 		java.util.Scanner sc = new java.util.Scanner(System.in);
 		int N = sc.nextInt();
 		int M = sc.nextInt();
-		int[] arr = new int[N];
-		for(int i=0; i<N; i++) {
-			arr[i] =i + 1;
+
+		System.out.println(new Main().solution(N, M));
+	}
+
+
+	String answer;
+	String solution(int N, int M){
+		answer = "";
+		combiDup(N, M, 0, new int[M]);
+		return answer;
+	}
+
+	void combiDup(int N, int M, int lv, int[] res){
+		if(lv == M){
+			for(int i : res) answer += i+" ";
+			answer += "\n";
+			return;
 		}
-
-		System.out.println(new Main().solution(N, M, arr));
+		for(int i=1; i<=N; i++){
+			res[lv] = i;
+			combiDup(N, M, lv+1, res);
+		}
 	}
-
-
-	String solution(int N, int M, int[] arr){
-		String answer = "";
-
-		return "";
-	}
-
 
 
 }

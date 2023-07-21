@@ -13,8 +13,20 @@ public class Main{
 	
 	String solution(int N, int M){
 		String answer = "";
-
+		combination(N, M, 0, 1, new int[M]);
 		return answer;
+	}
+
+	void combination(int N, int M, int lv, int s, int[] res){
+		if(lv == M){
+			for(int n : res)System.out.print(n+" ");
+			System.out.println();
+			return;
+		}
+		for(int i=s; i<=N; i++){
+			res[lv] = i;
+			combination(N, M, lv+1, i+1, res);
+		}
 	}
 
 }

@@ -15,45 +15,41 @@ public class Main{
 			int b = sc.nextInt();
 			graph.get(a).add(b);
 		}
-		System.out.println(new Main().solution(N, M, graph));
+
+		Main main = new Main();
+		for(int i=2; i<=N; i++){
+			int ans = main.solution(N, i, graph);
+			System.out.println(i + " : "+ans);
+		}
+		
 	}
 	int answer;
 	
 	int solution(int N, int M, List<List<Integer>> graph){
-		answer = 0;
-		boolean[] visited = new boolean[N+1];
-		visited[1] = true;
-		DFS(graph, N, 1, visited, 1+" ");
 
 		return answer;
 	}
 
-	void DFS(List<List<Integer>> graph, int N, int n, boolean[] visited, String path){
-		if(n == N){
-			answer++;
-			System.out.println(path);
-			return;
-		}
-		
-		for(int t : graph.get(n)){
-			if(visited[t]) continue;
-			visited[t] = true;
-			DFS(graph, N, t, visited, path+t+" ");
-			visited[t] = false;
-		}
 
-	}
-	/*
-5 9
-1 2
+
+}
+/*
+6 9
 1 3
 1 4
 2 1
-2 3
 2 5
 3 4
-4 2
 4 5
-*/
+4 6
+6 2
+6 5
 
-}
+*/
+/*
+2 : 3
+3 : 1
+4 : 1
+5 : 2
+6 : 2
+*/

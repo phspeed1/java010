@@ -32,9 +32,38 @@ public class Main{
 
 	int solution(int[][] board){
 		answer = 0;
-		
+		board[0][0] = 1;
+		answer = BFS(board, new Point(0, 0));
 
 		return answer;
+	}
+
+	int BFS(int[][] board, Point root){
+		int N = board.length;
+		Queue<Point> queue = new LinkedList<Point>();
+		queue.offer(root);
+		
+		int lv = 0;
+		while(!queue.isEmpty()){
+			int leng = queue.size();
+			for(int i=0; i<leng; i++){
+				Point temp = queue.poll();
+				int dis = board[temp.x][temp.y];
+
+				for(int j=0; j<dx.length; j++){
+					int nx = temp.x + dx[j];
+					int ny = temp.y + dy[j];
+
+					if(nx >= 0 && nx <N && ny >= 0 && ny <N && board[nx][ny] == 0){
+						if(nx == N-1 && ny == N-1) return dis;
+						board[nx][ny] = dis+1;
+						queue.offer(new Point(nx, ny));
+					}
+				}
+			}
+			lv++;
+		}
+		return -1;
 	}
 	
 	class Point{

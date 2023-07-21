@@ -26,10 +26,33 @@ public class Main{
 		System.out.println(new Main().solution(board));
 	}
 	
+	int answer;
 	int solution(int[][] board){
-		int answer = 0;
+		answer = 0;
+		board[0][0] = 2;
+		DFS(board, 0, 0);
+		return answer;
+	}
+	int[] dx = {-1, 0, 1, 0};
+	int[] dy = {0, 1, 0, -1};
 
-		return cnt;
+	void DFS(int[][] board, int x, int y){
+		int N = board.length;
+		if(x == N-1 && y == N-1){
+			answer++;
+			return;
+		}
+
+		for(int i=0; i<dx.length; i++){
+			int nx = x + dx[i];
+			int ny = y + dy[i];
+
+			if(nx >= 0 && nx <N && ny >= 0 && ny <N && board[nx][ny] == 0){
+				board[nx][ny] = 2;
+				DFS(board, nx, ny);
+				board[nx][ny] = 0;
+			}
+		}
 	}
 	
 

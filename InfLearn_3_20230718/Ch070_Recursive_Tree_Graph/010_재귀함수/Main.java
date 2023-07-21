@@ -11,8 +11,14 @@ public class Main{
 
 	String solution(int N){
 		String answer = "";
-
+		recursive(N);
 		return answer;
+	}
+
+	void recursive(int n){
+		if(n == 0) return;
+		recursive(n-1);
+		System.out.print(n+" ");
 	}
 
 

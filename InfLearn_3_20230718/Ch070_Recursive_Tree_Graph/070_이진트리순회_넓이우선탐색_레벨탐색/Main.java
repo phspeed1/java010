@@ -19,10 +19,41 @@ public class Main{
 		t.rt.lt = new Tree(6);
 		t.rt.rt = new Tree(7);
 
+		BFS(t);
+
 		return answer;
 	}
 
+	void BFS(Tree t){
 
+		Queue<Tree> q = new LinkedList<>();
+		q.offer(t);
+
+		while(!q.isEmpty()){
+			Tree temp = q.poll();
+			if(temp == null) continue;
+
+			System.out.print(temp.toString());
+			q.offer(temp.lt);
+			q.offer(temp.rt);
+
+		}
+
+	}
+
+
+	class Tree{
+		int n;
+		Tree lt, rt;
+		Tree(int n){
+			this.n = n;
+			this.lt = null; this.rt = null;
+		}
+		public String toString(){
+			return this.n + " ";
+		}
+
+	}
 
 
 }

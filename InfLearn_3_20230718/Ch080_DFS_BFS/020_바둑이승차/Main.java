@@ -12,8 +12,19 @@ public class Main{
 
 	int solution(int C, int N, int[] arr){
 		answer = 0;
+		
+		DFS(C, N, arr, 0, 0);
 
 		return answer;
+	}
+
+	void DFS(int C, int N, int[] arr, int lv, int sum){
+		if(sum > C) return;
+		answer = Math.max(answer, sum);
+		if(lv == N) return;
+
+		DFS(C, N, arr, lv+1, sum);
+		DFS(C, N, arr, lv+1, sum+arr[lv]);
 	}
 
 

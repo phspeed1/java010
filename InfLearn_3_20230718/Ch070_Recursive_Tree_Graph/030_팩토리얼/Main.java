@@ -11,8 +11,14 @@ public class Main{
 
 	String solution(int N){
 		String answer = "";
-
+		int f = factorial(N);
+		answer = f+"";
 		return answer;
+	}
+
+	int factorial(int n){
+		if(n == 1) return 1;
+		return n * factorial(n-1);
 	}
 
 
